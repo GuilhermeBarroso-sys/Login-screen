@@ -1,3 +1,20 @@
+
+@keyframes bg {
+    0%   {background-image:linear-gradient(to top left, #b409a9, #0f2fce);}
+    25%  {background-image:linear-gradient(to left top, #c222b7, #2137a3);}
+    50%  {background-image:linear-gradient(to top left, #e439d8, #2a4dfd);}
+    75%  {background-image:linear-gradient(to top left, #f050e5, #4662ec);}
+    100% {background-image:linear-gradient(to left top, #c850c0, #4158d0);}
+}
+@keyframes inputh {
+    to {
+        border: 0px solid green;
+    }
+    from {
+        border: 5px solid green;
+    }
+}
+
 body,html {
     margin:0;
     padding:0;
@@ -5,7 +22,9 @@ body,html {
     background-image:linear-gradient(-135deg, #c850c0, #4158d0);
     height:100%;
     font-family: 'Amatic SC', cursive;
-    background-repeat:no-repeat
+    background-repeat:no-repeat;
+    animation: bg 5s infinite linear;
+    
 }
 
 .perfect-center {
@@ -18,7 +37,7 @@ body,html {
 .container-flex {
     width:75%;
     min-height: 90vh;
-    background-color:whitesmoke;
+    background-color:rgba(255, 255, 255, 0.356);
     border-radius: 30px;
     display:flex;
     flex-direction:row;
@@ -41,6 +60,7 @@ input, button {
     outline: none;
     margin-bottom:35px;
 }
+
 button:hover {
     cursor:pointer;
 }
@@ -85,6 +105,11 @@ a {
     border-radius: 25px;
     padding: 0 30px 0 30px;
 }
+.password:focus {
+    animation:inputh 2s;
+    animation-fill-mode: forwards;
+    animation: paused;
+}
 .btn-submit {
     font-family: 'Amatic SC', cursive;
     font-size: 22px;
@@ -109,6 +134,7 @@ a {
     transition: all 0.4s;
 
 }
+
 
 
 @media screen and (max-width:1000px) {
